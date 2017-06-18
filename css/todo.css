@@ -14,6 +14,10 @@
     margin-bottom: 20px;
 }
 
+.todo-wrapper {
+    margin-bottom: 20px;
+}
+
 .header {
     border-bottom: solid 1px #ddd;
 }
@@ -36,5 +40,9 @@ input[type="checkbox"] {
 
 .done-true {
     text-decoration: line-through;
+    color: #ddd;
+}
+
+.empty-list {
     color: #ddd;
 }

@@ -28,6 +28,10 @@
                 <span class="done-{{todo.done}}" ng-click="toggleTodoStatus(todo)">{{todo.text}}</span>
             </li>
         </ul>
+
+        <div class="empty-list" ng-if="!todos.length">
+            You have nothing to do
+        </div>
     </div>
 
     <!--Actions-->

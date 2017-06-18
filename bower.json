@@ -1,0 +1,12 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "homepage": "https://github.com/phieudu241/to-do-list",
+  "authors": [
+    "Dung Le"
+  ],
+  "dependencies": {
+    "angular-mocks": "~1.6.4",
+    "angular": "~1.6.4"
+  }
+}

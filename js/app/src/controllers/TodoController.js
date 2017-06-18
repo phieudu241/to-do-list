@@ -8,6 +8,7 @@ angular.module('controllers')
                 {text: 'Create to-do-list repository', done: true, selected: false},
                 {text: 'Initialize app', done: true, selected: false},
                 {text: 'Implement todo list', done: true, selected: false},
+                {text: 'Add test cases', done: true, selected: false},
                 {text: 'Submit app', done: true, selected: false},
                 {text: 'Customer confirmed', done: false, selected: false}
             ];
@@ -31,6 +32,6 @@ angular.module('controllers')
             $scope.toggleSelectAll = function () {
                 $scope.todos.forEach(function (todo) {
                     todo.selected = $scope.checked;
-                })
+                });
             };
         }]);

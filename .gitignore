@@ -1,2 +1,4 @@
 # Ignores WebStorm config files
 .idea
+node_modules
+bower_components

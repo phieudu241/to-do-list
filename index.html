@@ -1,16 +1,44 @@
+<!DOCTYPE html>
 <html ng-app="TodoApp" ng-controller="TodoController">
 <head>
     <title>Todo App</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/todo.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 </head>
 
 <body>
-<div class="todo-wrapper" ng-controller="TodoController">
-    <h2>{{message}}</h2>
+<div class="container" ng-controller="TodoController">
+    <h2>Todo list</h2>
+
+    <!--Add new todo textbox-->
+    <form ng-submit="addTodo()">
+        <input class="add-todo" placeholder="What do you want do to..." type="text" ng-model="newTodoText"/>
+    </form>
+
+    <!--Todo list-->
+    <div class="todo-wrapper">
+        <div class="header">
+            <input type="checkbox" ng-model="checked" ng-click="toggleSelectAll()"/>
+            <span class="">Todos</span>
+        </div>
+        <ul class="list-unstyled todo-list">
+            <li ng-repeat="todo in todos">
+                <input type="checkbox" ng-model="todo.selected"/>
+                <span class="done-{{todo.done}}" ng-click="toggleTodoStatus(todo)">{{todo.text}}</span>
+            </li>
+        </ul>
+    </div>
+
+    <!--Actions-->
+    <form>
+        <button type="button" class="btn btn-success" ng-click="addTodo()">Add</button>
+        <button type="button" class="btn btn-danger" ng-click="deleteTodos()">Delete</button>
+    </form>
 </div>
 
 <!--App scripts-->
-<script src="TodoApp.js"></script>
-<script src="controllers/TodoController.js"></script>
+<script src="js/TodoApp.js"></script>
+<script src="js/controllers/TodoController.js"></script>
 </body>
 </html>
